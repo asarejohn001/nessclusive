@@ -9,6 +9,8 @@ New-AzResourceGroup `
     -Name "rg-NessclusiveRg" `
     -Location "East US2"
 
+
+# This didnt work propably so had to create the webapp from the portal
 # Create a static web app
 New-AzStaticWebApp `
     -Name         "NessclsuiveShop" `
