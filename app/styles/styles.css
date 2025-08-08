@@ -1,23 +1,61 @@
 /* ---------- Tokens & Fonts ---------- */
-:root{
-  /* Colors (approximated from provided style guide) */
-  --color-body-text: #15001A;      /* deep body text / near-black purple */
-  --color-primary:   #621E69;      /* primary purple */
-  --color-primary-2: #8A3AA6;      /* accent/lighter purple */
-  --color-card-1:    #D5C3EE;      /* pale lilac card */
-  --color-card-cta:  #E9E0F6;      /* card CTA / pale pink-lilac */
-  --color-secondary: #FFF4E1;      /* warm cream / secondary */
-  --color-bg:        #FBF5F5;      /* page background pale */
-  --color-muted:     #F1E5EB;      /* subtle pink surface */
-  --color-white:     #FFFFFF;
+/* ---------- Local fonts (using your .ttf files) ---------- */
 
-  /* Layout tokens */
+@font-face{
+  font-family: "Inter Tight";
+  src: url("assets/fonts/InterTight-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Inter Tight";
+  src: url("assets/fonts/InterTight-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Inter Tight";
+  src: url("assets/fonts/InterTight-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bricolage Grotesque (used for large/display headings) */
+@font-face{
+  font-family: "Bricolage Grotesque";
+  src: url("assets/fonts/BricolageGrotesque-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: "Bricolage Grotesque";
+  src: url("assets/fonts/BricolageGrotesque-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Color tokens (from your style guide) ---------- */
+:root{
+  --color-body-text: #15001A;   /* 1 - Body Text */
+  --color-primary:   #621E69;   /* 2 - Primary Color */
+  --color-card-1:    #F7E8F1;   /* 3 - Card 1 */
+  --color-card-cta:  #ECD6E3;   /* 4 - Card CTA */
+  --color-secondary: #FEF1D5;   /* 5 - Secondary Color */
+  --color-muted:     #F4E8E8;   /* 6 - Card 2 / muted */
+  --color-surface-1: #FDF9F0;   /* 7 - Card 3 / surface */
+  --color-bg:        #FFFDF8;   /* 8 - Background */
+
+  /* other tokens (keep as-is or adjust) */
   --radius: 16px;
   --container: 1200px;
-  --max-width: 1200px;
 
-  /* Typography scale (use semantic classes below) */
-  --fs-display: 120px;  /* display (very large) */
+  /* typography scale (example values left as before) */
+  --fs-display: 120px;
   --fs-h1: 64px;
   --fs-h2: 48px;
   --fs-h3: 36px;
@@ -29,32 +67,21 @@
   --fs-caption: 12px;
 }
 
-/* ---------- Font-face (example) ----------
-   If you have .woff/.woff2 files upload them to /assets/fonts and
-   update the src URLs below (recommended). If you don't have these,
-   remove the @font-face blocks and rely on the fallback stack. */
-@font-face{
-  font-family: "Inter Tight";
-  src: url("assets/fonts/InterTight-Regular.woff2") format("woff2"),
-       url("assets/fonts/InterTight-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face{
-  font-family: "Bricolage Grotesque";
-  src: url("assets/fonts/BricolageGrotesque-Semibold.woff2") format("woff2"),
-       url("assets/fonts/BricolageGrotesque-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* ---------- Fallback stacks (used if custom fonts missing) ---------- */
+/* Use the fonts in stacks */
 :root{
   --stack-sans: "Inter Tight", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --stack-display: "Bricolage Grotesque", "Montserrat", "Oswald", "Poppins", system-ui, sans-serif;
 }
+
+/* Example usage */
+body {
+  font-family: var(--stack-sans);
+  color: var(--color-body-text);
+  background: linear-gradient(180deg, var(--color-bg), #ffffff 40%);
+}
+.h1 { font-family: var(--stack-display); color: var(--color-body-text); }
+.bg-primary { background: linear-gradient(90deg, var(--color-primary), #8a3aa6); }
+
 
 /* ---------- Base ---------- */
 *{box-sizing:border-box}
