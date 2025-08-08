@@ -1,21 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nessclusive</title>
-  <link rel="stylesheet" href="./styles/styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nessclusive — Demo</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="./scripts/scripts.js">
+
+  <!-- Optional: favicon -->
+  <link rel="icon" href="assets/logo-placeholder.png" type="image/png">
 </head>
 <body>
-  <header>
-    <h1>Welcome to Nessclusive Hair Extension</h1>
-  </header>
-  <main>
-    <p>This is some sample text on your new homepage.</p>
-  </main>
-  <footer>
-    <small>© 2025 My Shop</small>
-  </footer>
-  <script src="./scripts/scripts.js"></script>
+
+  <div class="site">
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <div class="logo">
+        <img src="assets/logo-placeholder.png" alt="logo" width="46" height="46" style="border-radius:8px; background:#fff; box-shadow:0 6px 12px rgba(0,0,0,.06)">
+        <div>
+          <div class="brand">Nessclusive</div>
+          <div style="font-size:11px;color:#7e5a6d;margin-top:2px">Be Bold, Be Exclusive</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Wigs</a></li>
+          <li><a href="#">Book a Style</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-ghost">Sign in</button>
+        <button class="btn btn-primary">Shop Now</button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Hero">
+      <h1>Be Bold, Be Exclusive</h1>
+      <p class="lead">Let your wig do the talking with Nessclusive — premium hairpieces and styling appointments for every mood.</p>
+      <div class="cta-group">
+        <button class="btn btn-primary">Shop Collection</button>
+        <button class="btn btn-ghost">Book Appointment</button>
+      </div>
+
+      <!-- small image strip -->
+      <div class="image-strip" aria-hidden="false">
+        <!-- Replace these src paths with your actual images -->
+        <img class="item" src="assets/strip1.jpg" alt="">
+        <img class="item" src="assets/strip2.jpg" alt="">
+        <img class="item" src="assets/strip3.jpg" alt="">
+        <img class="item" src="assets/strip4.jpg" alt="">
+        <img class="item" src="assets/strip5.jpg" alt="">
+      </div>
+    </section>
+
+    <!-- Explore Collection -->
+    <section class="section">
+      <h2>Explore Collection</h2>
+      <div class="collections">
+        <div class="card">
+          <div class="thumb"><img src="assets/collection-1.jpg" alt="Collection 1" style="width:100%; height:100%; object-fit:cover;"></div>
+          <div class="title">Premium Wigs</div>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="assets/collection-2.jpg" alt="Collection 2" style="width:100%; height:100%; object-fit:cover;"></div>
+          <div class="title">Ready to Wear Wigs</div>
+        </div>
+        <div class="card">
+          <div class="thumb"><img src="assets/collection-3.jpg" alt="Collection 3" style="width:100%; height:100%; object-fit:cover;"></div>
+          <div class="title">Accessories</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Purple CTA -->
+    <section class="cta-banner" aria-labelledby="cta-title">
+      <div class="left">
+        <h3 id="cta-title">Step Up Your Style, Book Now</h3>
+        <p>Book an appointment with our stylists for custom installs, coloring, and care. We create looks that last and make you feel like you.</p>
+        <button class="cta-btn">Book an Appointment</button>
+      </div>
+      <div class="right">
+        <div class="people-frame">
+          <img src="assets/cta-people.jpg" alt="group" style="width:100%; height:100%; object-fit:cover;">
+        </div>
+      </div>
+    </section>
+
+    <!-- Bestsellers / Carousel -->
+    <section class="section">
+      <h2 style="text-align:center">Our Bestseller Hairpieces</h2>
+      <div class="product-carousel">
+        <div class="carousel-inner" id="carousel">
+          <div class="product">
+            <div class="p-thumb"><img src="assets/prod1.jpg" alt=""></div>
+            <div class="meta"><div>Vibe 1</div><div class="price">$420.00</div></div>
+          </div>
+          <div class="product">
+            <div class="p-thumb"><img src="assets/prod2.jpg" alt=""></div>
+            <div class="meta"><div>Marley</div><div class="price">$200.00</div></div>
+          </div>
+          <div class="product">
+            <div class="p-thumb"><img src="assets/prod3.jpg" alt=""></div>
+            <div class="meta"><div>Silky</div><div class="price">$340.00</div></div>
+          </div>
+          <div class="product">
+            <div class="p-thumb"><img src="assets/prod4.jpg" alt=""></div>
+            <div class="meta"><div>Nova</div><div class="price">$120.00</div></div>
+          </div>
+        </div>
+
+        <div class="carousel-controls" aria-hidden="true">
+          <button id="prev" aria-label="Previous">&lt;</button>
+          <button id="next" aria-label="Next">&gt;</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section">
+      <h2 style="text-align:center">A little about us</h2>
+      <div class="about">
+        <div class="box">
+          <h3>Our Story, Your Style</h3>
+          <p>We provide premium wigs and styling services built with care. From custom installations to ready-to-wear pieces — our team helps you feel your best.</p>
+        </div>
+        <div class="box">
+          <h3>Quality & Care</h3>
+          <p>We ensure premium quality hairpieces, carefully sourced and expertly styled. Book a consultation for personalized solutions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <h2 style="text-align:center">Words from our Happy Clients</h2>
+      <div class="testimonials">
+        <div class="testi">"Beautiful work — love my wig!" <br><strong>— A. Brown</strong></div>
+        <div class="testi">"Quick booking and great service." <br><strong>— T. Morgan</strong></div>
+        <div class="testi">"High quality hair, would recommend." <br><strong>— L. Carter</strong></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2 style="text-align:center">Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="acc">
+          <details>
+            <summary>What is the return policy?</summary>
+            <div style="margin-top:10px;color:#51424b">We accept returns up to 14 days on unworn items. Contact support for details.</div>
+          </details>
+        </div>
+        <div class="acc">
+          <details>
+            <summary>How long does shipping take?</summary>
+            <div style="margin-top:10px;color:#51424b">Standard shipping is 3–7 business days; expedited options available at checkout.</div>
+          </details>
+        </div>
+        <div class="acc">
+          <details>
+            <summary>Do you offer styling appointments?</summary>
+            <div style="margin-top:10px;color:#51424b">Yes — book online for in-studio or virtual consultations.</div>
+          </details>
+        </div>
+        <div class="acc">
+          <details>
+            <summary>How do I care for my wig?</summary>
+            <div style="margin-top:10px;color:#51424b">Every piece comes with care instructions and recommended products.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <h3 style="margin:0 0 8px">Let's Stay Connected</h3>
+          <p style="margin:0 0 14px; max-width:480px">Sign up for updates, styling tips and exclusive drops. Follow us on Instagram @Nessclusive</p>
+
+          <!-- social icons placeholders -->
+          <div style="display:flex; gap:10px; align-items:center">
+            <img src="assets/ig.png" alt="ig" width="36" height="36" style="background:white;border-radius:8px; padding:6px;">
+            <img src="assets/fb.png" alt="fb" width="36" height="36" style="background:white;border-radius:8px; padding:6px;">
+            <img src="assets/tw.png" alt="tw" width="36" height="36" style="background:white;border-radius:8px; padding:6px;">
+          </div>
+        </div>
+
+        <div class="newsletter">
+          <form id="newsletter">
+            <input type="email" name="email" placeholder="Your email address" required />
+            <textarea name="message" rows="3" placeholder="Message (optional)"></textarea>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Main script -->
+  <script src="./scripts/scripts.js" defer></script>
 </body>
 </html>
